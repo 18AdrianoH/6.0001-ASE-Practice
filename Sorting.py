@@ -24,6 +24,10 @@ class Sorter(object):
     '''
     @staticmethod
     def quick_sort(ls,debug=False):
+        def qs(lis,db=False):
+            pass
+        def par(lis,db=False):
+            pass
         pass
     
     '''
@@ -32,6 +36,10 @@ class Sorter(object):
     '''
     @staticmethod
     def merge_sort(ls,debug=False):
+        def merge(ls1,ls2):
+            pass
+        def sortp(lis):
+            pass
         pass
     
     '''
@@ -39,6 +47,17 @@ class Sorter(object):
     '''
     @staticmethod
     def bubble_sort(ls,debug=False):
+        sorted = False
+        lls = len(ls)
+        while (not sorted):
+            sorted = True
+            for index in range(0,lls-1):
+                if (ls[index+1]<ls[index]):
+                    sorted = False
+                    (ls[index], ls[index+1]) = (ls[index+1], ls[index])
+                    pass
+                pass
+            pass
         pass
     
     '''
@@ -46,6 +65,13 @@ class Sorter(object):
     '''
     @staticmethod
     def insertion_sort(ls,debug=False):
+        for pointer in range(1,len(ls)):
+            pointert = pointer
+            while pointert > 0 and ls[pointert-1] > ls[pointert]:
+                (ls[pointert-1],ls[pointert]) = (ls[pointert],ls[pointert-1])
+                pointert = pointert - 1
+                pass
+            pass
         pass
 
     '''
