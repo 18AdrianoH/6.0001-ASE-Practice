@@ -8,6 +8,7 @@ Sorting Tester.
 '''
 Yay!
 '''
+'''
 ls = [1,3,5,4,2,7,5,0,9]
 print(ls)
 Sorter.selection_sort(ls)
@@ -20,6 +21,13 @@ ls = [1,3,5,4,2,7,5,0,9]
 print(ls)
 Sorter.insertion_sort(ls)
 print(ls)
+'''
+# important! DBUG THIS
+ls = [1,3,5,4,2,7,5,0,9]
+print(ls)
+ls = Sorter.merge_sort(ls)
+print ls
+
 
 
 # TODO: PLEASE FIX THIS FUNCTIONAL FUNCTION

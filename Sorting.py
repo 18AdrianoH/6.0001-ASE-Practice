@@ -31,16 +31,43 @@ class Sorter(object):
         pass
     
     '''
+    Merge sort helpers.
+    '''
+    @staticmethod
+    def merge(ls1,ls2):
+        #print ls1
+        #print ls2
+    	ls3 = []
+        lss1 = ls1[:]
+        lss2 = ls2[:]
+        while len(lss1) > 0 and len(lss2) > 0:
+            if lss1[0] > lss2[0]:
+                ls3.append(lss2[0])
+                lss2 = lss2[1:]
+            else:
+                ls3.append(lss1[0])
+                lss1 = lss1[1:]
+            pass
+        if len(lss1) > 0:
+            ls3.extend(lss1)
+        elif len(lss2) > 0:
+            ls3.extend(lss2)
+        return ls3
+    @staticmethod
+    def sortp(lis):
+        if len(lis) == 1:
+            return lis
+        else:
+            left = lis[:len(lis)//2]
+            right = lis[len(lis)//2:]
+            return Sorter.merge(Sorter.sortp(left),Sorter.sortp(right))
+    '''
     Divide and conquer version of selection sort that works in nlogn since
     for n items in a tree it must go up logn levels and do this for each item.
     '''
     @staticmethod
     def merge_sort(ls,debug=False):
-        def merge(ls1,ls2):
-            pass
-        def sortp(lis):
-            pass
-        pass
+        return Sorter.sortp(ls)
     
     '''
     Swap items if not in order... repeat until sorted.
